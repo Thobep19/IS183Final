@@ -2,10 +2,10 @@
 
 <div *ngIf="tank" class="book-create-container box-shadow">
   <label class="label">Tank Name</label>
-  <input class="form-input" type="text">
+  <input class="form-input" type="text" [(ngModel)]="tank.tank_name">
   <label class="label">Serial Number</label>
-  <input class="form-input" type="text">
+  <input class="form-input" type="text" [(ngModel)]="tank.serial_number">
   <label class="label">Gallons</label>
-  <input class="form-input" type="text">
-  <button class="btn pull-right">Update Tank</button>
+  <input class="form-input" type="text" [(ngModel)]="tank.gallons">
+  <button (click)="updateTank(tank.id, tank)" class="btn pull-right">Update Tank</button>
 </div>
