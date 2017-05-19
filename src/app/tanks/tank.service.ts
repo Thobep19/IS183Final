@@ -27,7 +27,7 @@ export class TankService {
     getTankById(tankId): Promise<Object> {
         return this.http.get(`${this.apiUrl}/tank/id/${tankId}`).toPromise().then((resp) => {
             let tank = resp.json();
-            console.log('book', tank);
+            console.log('tank', tank);
             return tank;
         });
     }
