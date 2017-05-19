@@ -1,9 +1,9 @@
 <div class="book-create-container box-shadow">
   <label class="label">Tank Name</label>
-  <input class="form-input" type="text" required>
+  <input class="form-input" type="text" [(ngModel)]="tank.tank_name" required>
   <label class="label">Serial Number</label>
-  <input class="form-input" type="text" required>
+  <input class="form-input" type="text" [(ngModel)]="tank.serial_number"required>
   <label class="label">Gallons</label>
-  <input class="form-input" type="text" required>
-  <button class="btn pull-right">Create Tank</button>
+  <input class="form-input" type="text" [(ngModel)]="tank.gallons" required>
+  <button (click)="createTank(tank)" class="btn pull-right">Create Tank</button>
 </div>
